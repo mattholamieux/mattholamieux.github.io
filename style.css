@@ -1,6 +1,113 @@
 body {
-  background-color: rgb(201, 161, 83);
-  color: rgb(93, 211, 231);
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Lora'serif;
+  background-color: #F4F4F4;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  position: fixed;
+  border-top: solid 5px #feea34;
+  background-color: rgb(132,58,124, 0.3);
+  width: 100%;
+  /* opacity: 0.7; */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: absolute;
+}
+
+
+header h1 {
+  display: block;
+  font-size: 24px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+  color: #F4F4F4;
+}
+
+.hero {
+  padding-top: 160px;
+  padding-bottom: 160px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 50px;
+  background-image: url('assets/hydragif.gif');
+}
+
+.hero h2 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #F4F4F4;
+}
+
+.pictures .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo {
+  display: block;
+  width: 33.33%;
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.photo img {
+  border: solid 2px #C2CADC;
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+
+#still img{
+  object-position: 0 0;
+}
+
+.overlay {
+  opacity: 0;
+  background-color: #feea34;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: opacity 0.3s ease;
+}
+
+.photo:hover .overlay {
+  opacity: 0.6;
+}
+
+.overlay h3 {
+  margin: 0;
+}
+
+.filters ul {
+  padding-left: 0;
+}
+
+.filters li {
+  display: inline;
+  padding-right: 15px;
+}
+
+.filters a {
+  text-decoration: none;
+  color: #000;
   font-size: 18px;
+}
+
+.selected {
+  border-bottom: solid 3px #feea34;
 }
