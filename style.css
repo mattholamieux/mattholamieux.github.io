@@ -13,11 +13,10 @@ body {
 }
 
 header {
-  position: fixed;
-  border-top: solid 5px #feea34;
-  background-color: rgb(132,58,124, 0.3);
+  /* position: fixed; */
+  border-top: solid 5px #186774;
+  background-color: rgba(105, 106, 110, 0.3);
   width: 100%;
-  /* opacity: 0.7; */
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -27,7 +26,7 @@ header {
 
 header h1 {
   display: block;
-  font-size: 24px;
+  font-size: 18px;
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 10px;
@@ -51,6 +50,10 @@ header h1 {
   color: #F4F4F4;
 }
 
+.pictures{
+  margin-bottom: 50px;
+}
+
 .pictures .container {
   display: flex;
   flex-wrap: wrap;
@@ -60,7 +63,7 @@ header h1 {
   display: block;
   width: 33.33%;
   position: relative;
-  height: 200px;
+  height: 230px;
   overflow: hidden;
   object-fit: cover;
 }
@@ -69,7 +72,7 @@ header h1 {
   border: solid 2px #C2CADC;
   object-fit: cover;
   width: 100%;
-  height: 200px;
+  height: 230px;
 }
 
 #still img{
@@ -78,7 +81,7 @@ header h1 {
 
 .overlay {
   opacity: 0;
-  background-color: #feea34;
+  background-color: rgba(254, 234, 52, 0.5);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -86,12 +89,38 @@ header h1 {
 }
 
 .photo:hover .overlay {
-  opacity: 0.6;
+  opacity: 1;
+}
+
+.overlay h4,
+.overlay p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-weight: 700;
+}
+
+.overlay p {
+  font-size: 16px;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+    color: #000;
+}
+
+.overlay h4 {
+  color: #000;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-left: 15px;
 }
 
 .overlay h3 {
-  margin: 0;
+  color: #000;
+  font-size: 18px;
+  margin-top: 5px;
+  margin-left: 15px;
 }
+
 
 .filters ul {
   padding-left: 0;
@@ -109,5 +138,5 @@ header h1 {
 }
 
 .selected {
-  border-bottom: solid 3px #feea34;
+  border-bottom: solid 3px #186774;
 }
