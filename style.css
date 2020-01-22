@@ -19,14 +19,14 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
   position: absolute;
 }
 
 
 header h1 {
   display: block;
-  font-size: 18px;
+  font-size: 24px;
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 10px;
@@ -35,11 +35,11 @@ header h1 {
 }
 
 .hero {
-  padding-top: 160px;
-  padding-bottom: 160px;
+  padding-top: 40vh;
+  padding-bottom: 40vh;
   background-size: cover;
   background-position: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   background-image: url('assets/hydragif.gif');
 }
 
