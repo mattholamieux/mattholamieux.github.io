@@ -1,142 +1,77 @@
-body {
-  font-family: 'Fira Sans', sans-serif;
-  background-color: #F4F4F4;
-  color: #fff;
-  margin: 0;
-  padding: 0;
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('assets/fonts/Test The Future Mono/test-the-future-mono-light.woff2') format('woff2');
 }
 
-.container {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+body {
+    font-family: 'MyWebFont';
+    font-size: 24px;
+    line-height: 1.25;
+    background-color: #2727e6;
+    color: #fff;
+    background-image: url(assets/audio.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 90% auto;
+}
+
+main {
+    margin: 90vh auto 90vh auto;
+    width: 1000px;
 }
 
 header {
-  /* position: fixed; */
-  border-top: solid 5px #186774;
-  background-color: rgba(105, 106, 110, 0.3);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: absolute;
+    padding: 0px 55px;
+    overflow: hidden;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    background-color: #2727e6b0;
 }
 
-
-header h1 {
-  display: block;
-  font-size: 24px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-bottom: 10px;
-  margin-bottom: 0px;
-  color: #F4F4F4;
+header nav {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.hero {
-  padding-top: 40vh;
-  padding-bottom: 40vh;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 20px;
-  background-image: url('assets/hydragif.gif');
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    /* margin-left: 12px; */
 }
 
-.hero h2 {
-  font-size: 60px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #F4F4F4;
+.category {
+    margin-bottom: 80vh;
 }
 
-.pictures{
-  margin-bottom: 50px;
+.card {
+    margin: 200px 0 200px 0;
+    position: relative;
 }
 
-.pictures .container {
-  display: flex;
-  flex-wrap: wrap;
+.card div.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #2727e653;
+    width: 100%;
+    height: 100%;
 }
 
-.photo {
-  display: block;
-  width: 33.33%;
-  position: relative;
-  height: 230px;
-  overflow: hidden;
-  object-fit: cover;
+.card h2 {
+    text-align: center;
+    padding: 40px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 45vh;
 }
 
-.photo img {
-  border: solid 2px #C2CADC;
-  object-fit: cover;
-  width: 100%;
-  height: 230px;
-}
-
-#still img{
-  object-position: 0 0;
-}
-
-.overlay {
-  opacity: 0;
-  background-color: rgba(254, 234, 52, 0.5);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transition: opacity 0.3s ease;
-}
-
-.photo:hover .overlay {
-  opacity: 1;
-}
-
-.overlay h4,
-.overlay p {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  font-weight: 700;
-}
-
-.overlay p {
-  font-size: 16px;
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-    color: #000;
-}
-
-.overlay h4 {
-  color: #000;
-  font-size: 18px;
-  margin-top: 15px;
-  margin-left: 15px;
-}
-
-.overlay h3 {
-  color: #000;
-  font-size: 18px;
-  margin-top: 5px;
-  margin-left: 15px;
-}
-
-
-.filters ul {
-  padding-left: 0;
-}
-
-.filters li {
-  display: inline;
-  padding-right: 15px;
-}
-
-.filters a {
-  text-decoration: none;
-  color: #000;
-  font-size: 18px;
-}
-
-.selected {
-  border-bottom: solid 3px #186774;
+img {
+    width: 100%;
+    height: 750px;
 }

@@ -2,225 +2,109 @@
 <html>
 
 <head>
-  <title>Matt Nelson</title>
-  <meta charset="utf-8">
-  <link href="style.css" type="text/css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto+Mono&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
-  <script src="jquery.js"></script>
-  <script src="main.js"></script>
+    <title>Matt Nelson</title>
+    <meta charset="utf-8">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+    <script src="jquery.js"></script>
+    <script src="main.js"></script>
+    <script src="p5.min.js"></script>
 </head>
 
-<body>
-  <header>
-    <h1>Matt Nelson</h1>
-    <!-- <h1>Creative Technologist</h1> -->
-  </header>
+<body id="body">
 
-  <section class="hero">
-    <div class="container">
-      <h2>Video, Sound, & Creative Code</h2>
-    </div>
-  </section>
+    <header>
+        <p>Matt Nelson</p>
+        <nav>
+            <a href="#">Audio</a>
+            <a href="#">Web</a>
+            <a href="#">Teaching</a>
+            <a href="#">Other</a>
+        </nav>
+    </header>
 
+    <main>
+        <section class="category" id="audio">
+            <div class="card">
+                <img src="/assets/images/audio/jagged-dog-tape.jpg">
+                <div class="overlay">
+                    <h2>type/token: the jagged dog</h2>
+                </div>
+            </div>
 
+            <div class="card" id="first-audio">
+                <img src="/assets/images/audio/still-tape.jpg">
+                <div class="overlay">
+                    <h2>type/token: still</h2>
+                </div>
+            </div>
 
-  <nav class="filters">
-    <div class="container">
-      <ul class="filters-list">
-        <li>
-          <a href="all.html" class="selected" data-filter=".photo">All</a>
-        </li>
-        <li>
-          <a href="sound.html" data-filter=".sound">Sound</a>
-        </li>
-        <li>
-          <a href="video.html" data-filter=".video">Video</a>
-        </li>
-        <li>
-          <a href="coding.html" data-filter=".web">Web</a>
-        </li>
-        <li>
-          <a href="teaching.html" data-filter=".teaching">Teaching</a>
-        </li>
-        <li>
-          <a href="for-others.html" data-filter=".for-others">Editing & Sound Design</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+            <div class="card" id="last-audio">
+                <img src="/assets/images/audio/jello-world-tape.jpg">
+                <div class="overlay">
+                    <h2>Vacationland: Jello World</h2>
+                </div>
+            </div>
+        </section>
 
+        <section class="category" id="web">
+            <div class="card" id="first-web">
+                <img src="/assets/images/web/delta_wave title.gif">
+                <div class="overlay">
+                    <h2>Delta Wave: Polyrhythmic Synthesizer</h2>
+                </div>
+            </div>
 
-  <section class="pictures">
-    <div class="container">
+            <div class="card">
+                <img src="/assets/images/web/p5grain.png">
+                <div class="overlay">
+                    <h2>p5_grain: Granular sample player</h2>
+                </div>
+            </div>
 
-      <div class="photo sound video my-work">
-        <a href="https://vimeo.com/showcase/6279851" target="_blank">
-          <div class="overlay">
-            <h4>video synthesis with hydra</h4>
-            <p>#video #sound</p>
-          </div>
-          <img src="assets/unnamed.png">
-        </a>
-      </div>
+            <div class="card">
+                <img src="/assets/images/web/mosaic.png">
+                <div class="overlay">
+                    <h2>Mosaic: RGB-based monosynth</h2>
+                </div>
+            </div>
 
-      <div class="photo web sound">
-        <a href="https://mattholamieux.github.io/delta_wave/" target="_blank">
-          <div class="overlay">
-            <h4>delta wave</h4>
-            <p>#web #sound</p>
-          </div>
-          <img src="assets/delta_wave title.gif">
-        </a>
-      </div>
+            <div class="card" id="last-web">
+                <img src="/assets/images/web/pling-pong1.png">
+                <div class="overlay">
+                    <h2>Pling Pong: Esoteric Melodies</h2>
+                </div>
+            </div>
+        </section>
 
-      <div class="photo sound my-work">
-        <a href="https://vimeo.com/showcase/6730765" target="_blank">
-          <div class="overlay">
-            <h4>live coding performances</h4>
-            <p>#sound</p>
-          </div>
-          <img src="assets/live-performance-one.png">
-        </a>
-      </div>
+        <section class="category" id="teaching">
 
-      <div class="photo sound my-work" id="still">
-        <a href="https://tracedobjects.bandcamp.com/album/still" target="_blank">
-        <div class="overlay">
-          <h4>still - cassette release</h4>
-          <p>#sound</p>
-        </div>
-        <img src="assets/TO_001.jpg">
-      </div>
+            <div class="card">
+                <img src="/assets/web-audio-course.png">
+                <div class="overlay">
+                    <h2>Web Audio: 3-day course at Gray Area in SF</h2>
+                </div>
+            </div>
 
-      <div class="photo sound my-work">
-        <a href="https://vimeo.com/showcase/6276076" target="_blank">
-          <div class="overlay">
-            <h4>orca sketches</h4>
-            <p>#sound</p>
-          </div>
-          <img src="assets/celeste.png">
-        </a>
-      </div>
+            <div class="card">
+                <img src="/assets/sonic-pi-class.jpg">
+                <div class="overlay">
+                    <h2>Creative Coding with Sonic Pi</h2>
+                </div>
+            </div>
 
-      <div class="photo teaching">
-        <a href="https://www.mbnvideosound.com/teaching" target="_blank">
-        <div class="overlay">
-          <h4>creative coding with sonic pi</h4>
-          <p>#teaching #sound</p>
-        </div>
-        <img src="assets/sonic-pi-class.jpg">
-      </a>
-      </div>
+            <div class="card">
+                <img src="/assets/electronic-music-class.jpg">
+                <div class="overlay">
+                    <h2>Intro to Electronic Music</h2>
+                </div>
+            </div>
 
-      <div class="photo web my-work">
-        <a href="https://mattholamieux.github.io/soundTracer/" target="_blank">
-          <div class="overlay">
-            <h4>tracer</h4>
-            <p>#web #sound</p>
-          </div>
-          <img src="assets/tracer1.png">
-        </a>
-      </div>
+        </section>
 
-      <div class="photo sound my-work">
-        <a href="https://vimeo.com/352986375" target="_blank">
-          <div class="overlay">
-            <h4>generative music in pure data</h4>
-            <p>#sound</p>
-          </div>
-          <img src="assets/automatonism-one.png">
-        </a>
-      </div>
-
-      <div class="photo teaching">
-        <a href="https://www.mbnvideosound.com/teaching" target="_blank">
-        <div class="overlay">
-          <h4>mobile filmmaking</h4>
-          <p>#teaching #video</p>
-        </div>
-        <img src="assets/doc-class.jpg">
-      </a>
-      </div>
-
-      <div class="photo web sound">
-        <a href="https://mattholamieux.github.io/Granular-Sampler-v.1.01/" target="_blank">
-          <div class="overlay">
-            <h4>stretch</h4>
-            <p>#web #sound</p>
-          </div>
-          <img src="assets/grain-player.png">
-        </a>
-      </div>
-
-      <div class="photo web my-work">
-        <a href="https://mattholamieux.github.io/plingPong/" target="_blank">
-          <div class="overlay">
-            <h4>pling pong</h4>
-            <p>#web #sound</p>
-          </div>
-          <img src="assets/pling-pong1.png">
-        </a>
-      </div>
-
-      <div class="photo teaching">
-        <a href="https://www.mbnvideosound.com/teaching" target="_blank">
-        <div class="overlay">
-          <h4>intro to electronic music</h4>
-          <p>#teaching #sound</p>
-        </div>
-        <img src="assets/electronic-music-class.jpg">
-      </a>
-      </div>
-
-      <div class="photo video for-others">
-        <a href="https://www.erinjohnson.online/2018" target="_blank">
-          <div class="overlay">
-            <h4>heavy water</h4>
-            <p>#editing & sound design  #video</p>
-          </div>
-          <img src="assets/heavy-water.jpg">
-        </a>
-      </div>
-
-      <div class="photo video for-others">
-        <a href="https://www.erinjohnson.online/2017" target="_blank">
-          <div class="overlay">
-            <h4>the way things can happen</h4>
-            <p>#editing & sound design  #video</p>
-          </div>
-          <img src="assets/TDA-Still.jpg">
-        </a>
-      </div>
-
-      <div class="photo sound for-others">
-        <a href="https://www.erinjohnson.online/2016" target="_blank">
-          <div class="overlay">
-            <h4>many miles before us</h4>
-            <p>#editing & sound design  #sound</p>
-          </div>
-          <img src="assets/many-miles.jpeg">
-        </a>
-      </div>
-
-      <div class="photo video for-others">
-        <a href="http://erinjohnson.online/providence-canyon" target="_blank">
-          <div class="overlay">
-            <h4>providence canyon</h4>
-            <p>#editing & sound design  #video</p>
-          </div>
-          <img src="assets/p-canyon.png">
-        </a>
-      </div>
-
-
-
-    </div>
-  </section>
-
-
-
+    </main>
 </body>
 
 </html>
