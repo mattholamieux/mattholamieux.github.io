@@ -15,17 +15,21 @@
 
 <body id="body">
 
-    <header>
+    <header id="nav">
         <p>Matt Nelson</p>
         <nav>
-            <a href="#">Audio</a>
-            <a href="#">Web</a>
-            <a href="#">Teaching</a>
-            <a href="#">Other</a>
+            <p id="audio-button">Audio</p>
+            <p id="web-button">Web</p>
+            <p id="teaching-button">Teaching</p>
+            <p id="other-button">Other</p>
         </nav>
     </header>
 
     <main>
+        <div>
+            <div id="down-arrow"></div>
+        </div>
+
         <section class="category" id="audio">
             <div class="card">
                 <img src="/assets/images/audio/jagged-dog-tape.jpg">
@@ -34,14 +38,14 @@
                 </div>
             </div>
 
-            <div class="card" id="first-audio">
+            <div class="card">
                 <img src="/assets/images/audio/still-tape.jpg">
                 <div class="overlay">
                     <h2>type/token: still</h2>
                 </div>
             </div>
 
-            <div class="card" id="last-audio">
+            <div class="card">
                 <img src="/assets/images/audio/jello-world-tape.jpg">
                 <div class="overlay">
                     <h2>Vacationland: Jello World</h2>
@@ -50,7 +54,7 @@
         </section>
 
         <section class="category" id="web">
-            <div class="card" id="first-web">
+            <div class="card">
                 <img src="/assets/images/web/delta_wave title.gif">
                 <div class="overlay">
                     <h2>Delta Wave: Polyrhythmic Synthesizer</h2>
@@ -71,7 +75,7 @@
                 </div>
             </div>
 
-            <div class="card" id="last-web">
+            <div class="card">
                 <img src="/assets/images/web/pling-pong1.png">
                 <div class="overlay">
                     <h2>Pling Pong: Esoteric Melodies</h2>
@@ -82,26 +86,58 @@
         <section class="category" id="teaching">
 
             <div class="card">
-                <img src="/assets/web-audio-course.png">
-                <div class="overlay">
-                    <h2>Web Audio: 3-day course at Gray Area in SF</h2>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="/assets/sonic-pi-class.jpg">
+                <img src="/assets/images/teaching/sonic-pi-class.jpg">
                 <div class="overlay">
                     <h2>Creative Coding with Sonic Pi</h2>
                 </div>
             </div>
 
             <div class="card">
-                <img src="/assets/electronic-music-class.jpg">
+                <a href="https://grayarea.org/course/creative-code-intensive/" target="_blank">
+                    <img src="/assets/images/teaching/web-audio-course.png">
+                    <div class="overlay">
+                        <h2>Creative Code Intensive: Web Audio</h2>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="/assets/images/teaching/electronic-music-class.jpg">
                 <div class="overlay">
                     <h2>Intro to Electronic Music</h2>
                 </div>
             </div>
+        </section>
 
+        <section class="category" id="other">
+
+            <div class="card">
+                <img src="/assets/images/other/tomatoes.png">
+                <div class="overlay">
+                    <h2>Tomatoes: Editing and Sound Design</h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/assets/images/other/heavy-water.jpg">
+                <div class="overlay">
+                    <h2>Heavy Water: Editing and Sound Design</h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/assets/images/other/TDA-Still.jpg">
+                <div class="overlay">
+                    <h2>The Way Things Can Happen: Editing and Sound Design</h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/assets/images/other/many-miles.jpeg">
+                <div class="overlay">
+                    <h2>Many Thousand Miles Behind Us: Sound Design</h2>
+                </div>
+            </div>
         </section>
 
     </main>
