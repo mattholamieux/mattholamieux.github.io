@@ -11,6 +11,7 @@ $(document).ready(function() {
     body.style.backgroundSize = `${bgSize}%`;
     const nav = document.getElementById('nav')
     let viewportHeight = window.innerHeight; // may need to change to window.screen.height for mobile?
+    let width = $(window).width();
     const audioSection = document.getElementById('audio');
     const webSection = document.getElementById('web');
     const teachingSection = document.getElementById('teaching');
@@ -143,26 +144,28 @@ $(document).ready(function() {
 
     window.addEventListener("resize", (e) => {
         e.preventDefault();
-        window.scroll({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
-        audioSectionTop = audioSectionOffset.top.toFixed();
-        audioSectionBottom = audioSectionOffset.bottom.toFixed();
-        audioSectionOffset = audioSection.getBoundingClientRect();
-        webSectionOffset = webSection.getBoundingClientRect();
-        webSectionTop = webSectionOffset.top.toFixed();
-        webSectionBottom = webSectionOffset.bottom.toFixed();
-        teachingSectionOffset = teachingSection.getBoundingClientRect();
-        teachingSectionTop = teachingSectionOffset.top.toFixed();
-        teachingSectionBottom = teachingSectionOffset.bottom.toFixed();
-        otherSectionOffset = otherSection.getBoundingClientRect();
-        otherSectionTop = otherSectionOffset.top.toFixed();
-        otherSectionBottom = otherSectionOffset.bottom.toFixed();
-        webSectionScrollTarget = audioSectionOffset.bottom.toFixed();
-        teachingSectionScrollTarget = webSectionOffset.bottom.toFixed();
-        otherSectionScrollTarget = teachingSectionOffset.bottom.toFixed();
+        if ($(window).width() != width) {
+            window.scroll({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+            audioSectionTop = audioSectionOffset.top.toFixed();
+            audioSectionBottom = audioSectionOffset.bottom.toFixed();
+            audioSectionOffset = audioSection.getBoundingClientRect();
+            webSectionOffset = webSection.getBoundingClientRect();
+            webSectionTop = webSectionOffset.top.toFixed();
+            webSectionBottom = webSectionOffset.bottom.toFixed();
+            teachingSectionOffset = teachingSection.getBoundingClientRect();
+            teachingSectionTop = teachingSectionOffset.top.toFixed();
+            teachingSectionBottom = teachingSectionOffset.bottom.toFixed();
+            otherSectionOffset = otherSection.getBoundingClientRect();
+            otherSectionTop = otherSectionOffset.top.toFixed();
+            otherSectionBottom = otherSectionOffset.bottom.toFixed();
+            webSectionScrollTarget = audioSectionOffset.bottom.toFixed();
+            teachingSectionScrollTarget = webSectionOffset.bottom.toFixed();
+            otherSectionScrollTarget = teachingSectionOffset.bottom.toFixed();
+        }
     });
 
 
