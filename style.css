@@ -9,12 +9,6 @@ body {
     line-height: 1.25;
     /* background-color: #2727e6; */
     color: #fff;
-    /* background-image: url(assets/audio.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: 90% auto;
-    transition: background-color 1s ease; */
 }
 
 .bg {
@@ -32,8 +26,8 @@ body {
 
 .content {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    left: 0;
     width: 100%;
 }
 
@@ -172,6 +166,9 @@ img {
     header nav p {
         padding: 0 5px;
     }
+    .category {
+        margin-bottom: 75vh;
+    }
     .card {
         margin: 100px 0 100px 0;
     }
@@ -189,6 +186,9 @@ img {
     }
     header nav p {
         padding: 0 5px;
+    }
+    .category {
+        margin-bottom: 70vh;
     }
     .card {
         margin: 100px 0 100px 0;
