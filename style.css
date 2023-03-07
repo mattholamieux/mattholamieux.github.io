@@ -7,14 +7,34 @@ body {
     font-family: 'MyWebFont';
     font-size: 24px;
     line-height: 1.25;
-    background-color: #2727e6;
+    /* background-color: #2727e6; */
     color: #fff;
-    background-image: url(assets/audio.svg);
+    /* background-image: url(assets/audio.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: 90% auto;
+    transition: background-color 1s ease; */
+}
+
+.bg {
+    top: 0;
+    left: 0;
+    background-color: #2727e6;
+    background-image: url(assets/audio.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
     transition: background-color 1s ease;
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
 }
 
 a {
@@ -24,7 +44,7 @@ a {
 
 main {
     margin: 90vh auto 90vh auto;
-    width: 1000px;
+    width: 70%;
 }
 
 header {
@@ -40,10 +60,14 @@ header {
 }
 
 header nav {
-    width: 400px;
+    max-width: 500px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+header nav p {
+    padding: 0 15px;
 }
 
 header nav a {
@@ -120,5 +144,56 @@ img {
     }
     100% {
         margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    body {
+        font-size: 16px;
+    }
+    header {
+        padding: 0px 25px;
+    }
+    header nav p {
+        padding: 0 5px;
+    }
+    .card h2 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+    header {
+        padding: 0px 20px;
+    }
+    header nav p {
+        padding: 0 5px;
+    }
+    .card {
+        margin: 100px 0 100px 0;
+    }
+    .card h2 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 12px;
+    }
+    header {
+        padding: 0px 10px;
+    }
+    header nav p {
+        padding: 0 5px;
+    }
+    .card {
+        margin: 100px 0 100px 0;
+    }
+    .card h2 {
+        font-size: 12px;
     }
 }
