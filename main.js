@@ -42,8 +42,6 @@ $(document).ready(function() {
 
     window.onscroll = function(e) {
         scroll = window.scrollY // Get scroll position
-            // body.style.backgroundSize = `${bgSize}%`;
-
         audioSectionOffset = audioSection.getBoundingClientRect();
         audioSectionTop = audioSectionOffset.top.toFixed();
         audioSectionBottom = audioSectionOffset.bottom.toFixed();
@@ -107,7 +105,7 @@ $(document).ready(function() {
 
     audioButton.addEventListener('click', (e) => {
         e.preventDefault();
-        window.scroll({
+        window.scrollTo({
             top: 0,
             left: 0,
             behavior: 'smooth'
@@ -116,30 +114,33 @@ $(document).ready(function() {
     webButton.addEventListener('click', (e) => {
         e.preventDefault();
         // webScrollTarget.scrollIntoView({ behavior: 'smooth', block: 'end' });
-        window.scroll({
-            top: webSectionScrollTarget,
-            left: 0,
-            behavior: 'smooth'
-        });
+        // window.scrollTo({
+        //     top: webSectionScrollTarget,
+        //     left: 0,
+        //     behavior: 'smooth'
+        // });
+        webSection.scrollIntoView({ behavior: "smooth", block: "start" })
     })
     teachingButton.addEventListener('click', (e) => {
         e.preventDefault();
         // webScrollTarget.scrollIntoView({ behavior: 'smooth', block: 'end' });
-        window.scroll({
-            top: teachingSectionScrollTarget,
-            left: 0,
-            behavior: 'smooth'
-        });
+        // window.scrollTo({
+        //     top: teachingSectionScrollTarget,
+        //     left: 0,
+        //     behavior: 'smooth'
+        // });
+        teachingSection.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
     })
 
     otherButton.addEventListener('click', (e) => {
         e.preventDefault();
         // webScrollTarget.scrollIntoView({ behavior: 'smooth', block: 'end' });
-        window.scroll({
-            top: otherSectionScrollTarget,
-            left: 0,
-            behavior: 'smooth'
-        });
+        // window.scrollTo({
+        //     top: otherSectionScrollTarget,
+        //     left: 0,
+        //     behavior: 'smooth'
+        // });
+        otherSection.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
     })
 
     window.addEventListener("resize", (e) => {
