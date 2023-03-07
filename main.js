@@ -37,27 +37,26 @@ $(document).ready(function() {
     let webSectionScrollTarget = audioSectionOffset.bottom.toFixed();
     let teachingSectionScrollTarget = webSectionOffset.bottom.toFixed();
     let otherSectionScrollTarget = teachingSectionOffset.bottom.toFixed();
-    console.log(webSectionScrollTarget)
-
+    console.log(viewportHeight);
 
     window.onscroll = function(e) {
         scroll = window.scrollY // Get scroll position
         audioSectionOffset = audioSection.getBoundingClientRect();
-        audioSectionTop = audioSectionOffset.top.toFixed();
-        audioSectionBottom = audioSectionOffset.bottom.toFixed();
+        audioSectionTop = audioSectionOffset.top + (viewportHeight * 0.7);
+        audioSectionBottom = audioSectionOffset.bottom;
 
         webSectionOffset = webSection.getBoundingClientRect();
-        webSectionTop = webSectionOffset.top.toFixed();
-        webSectionBottom = webSectionOffset.bottom.toFixed();
+        webSectionTop = webSectionOffset.top + (viewportHeight * 0.7);
+        webSectionBottom = webSectionOffset.bottom;
 
         teachingSectionOffset = teachingSection.getBoundingClientRect();
-        teachingSectionTop = teachingSectionOffset.top.toFixed();
-        teachingSectionBottom = teachingSectionOffset.bottom.toFixed();
+        teachingSectionTop = teachingSectionOffset.top + (viewportHeight * 0.7);
+        teachingSectionBottom = teachingSectionOffset.bottom;
 
         otherSectionOffset = otherSection.getBoundingClientRect();
-        otherSectionTop = otherSectionOffset.top.toFixed();
-        otherSectionBottom = otherSectionOffset.bottom.toFixed();
-
+        otherSectionTop = otherSectionOffset.top + (viewportHeight * 0.7);
+        otherSectionBottom = otherSectionOffset.bottom;
+        console.log(audioSectionTop);
 
         if (audioSectionTop < viewportHeight && audioSectionBottom > viewportHeight / 2) {
             body.style.backgroundImage = "url(assets/audio.svg)"
@@ -105,11 +104,12 @@ $(document).ready(function() {
 
     audioButton.addEventListener('click', (e) => {
         e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
+        // window.scrollTo({
+        //     top: 0,
+        //     left: 0,
+        //     behavior: 'smooth'
+        // });
+        audioSection.scrollIntoView({ behavior: "smooth", block: "start" })
     })
     webButton.addEventListener('click', (e) => {
         e.preventDefault();

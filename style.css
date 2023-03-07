@@ -37,7 +37,7 @@ a {
 }
 
 main {
-    margin: 90vh auto 90vh auto;
+    margin: 0 auto 90vh auto;
     width: 70%;
 }
 
@@ -101,9 +101,10 @@ img {
     height: auto;
 }
 
-#audio {
+
+/* #audio {
     padding-top: 1px;
-}
+} */
 
 #down-arrow {
     position: absolute;
