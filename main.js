@@ -7,7 +7,7 @@ let scaleFactor = 0.9;
 
 $(document).ready(function() {
     window.scroll(0, 0);
-    const body = document.getElementById('body');
+    const body = document.getElementById('bg');
     body.style.backgroundSize = `${bgSize}%`;
     const nav = document.getElementById('nav')
     let viewportHeight = window.innerHeight; // may need to change to window.screen.height for mobile?
@@ -33,10 +33,10 @@ $(document).ready(function() {
     let otherSectionOffset = otherSection.getBoundingClientRect();
     let otherSectionTop = otherSectionOffset.top.toFixed();
     let otherSectionBottom = otherSectionOffset.bottom.toFixed();
-    const webSectionScrollTarget = audioSectionOffset.bottom.toFixed();
-    const teachingSectionScrollTarget = webSectionOffset.bottom.toFixed();
-    const otherSectionScrollTarget = teachingSectionOffset.bottom.toFixed();
-    console.log(viewportHeight)
+    let webSectionScrollTarget = audioSectionOffset.bottom.toFixed();
+    let teachingSectionScrollTarget = webSectionOffset.bottom.toFixed();
+    let otherSectionScrollTarget = teachingSectionOffset.bottom.toFixed();
+    console.log(webSectionScrollTarget)
 
 
     window.onscroll = function(e) {
@@ -104,14 +104,16 @@ $(document).ready(function() {
         body.style.backgroundSize = `${bgSize}%`;
     }
 
-    audioButton.addEventListener('click', () => {
+    audioButton.addEventListener('click', (e) => {
+        e.preventDefault();
         window.scroll({
             top: 0,
             left: 0,
             behavior: 'smooth'
         });
     })
-    webButton.addEventListener('click', () => {
+    webButton.addEventListener('click', (e) => {
+        e.preventDefault();
         // webScrollTarget.scrollIntoView({ behavior: 'smooth', block: 'end' });
         window.scroll({
             top: webSectionScrollTarget,
@@ -119,7 +121,8 @@ $(document).ready(function() {
             behavior: 'smooth'
         });
     })
-    teachingButton.addEventListener('click', () => {
+    teachingButton.addEventListener('click', (e) => {
+        e.preventDefault();
         // webScrollTarget.scrollIntoView({ behavior: 'smooth', block: 'end' });
         window.scroll({
             top: teachingSectionScrollTarget,
@@ -128,7 +131,8 @@ $(document).ready(function() {
         });
     })
 
-    otherButton.addEventListener('click', () => {
+    otherButton.addEventListener('click', (e) => {
+        e.preventDefault();
         // webScrollTarget.scrollIntoView({ behavior: 'smooth', block: 'end' });
         window.scroll({
             top: otherSectionScrollTarget,
@@ -136,6 +140,30 @@ $(document).ready(function() {
             behavior: 'smooth'
         });
     })
+
+    window.addEventListener("resize", (e) => {
+        e.preventDefault();
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+        audioSectionTop = audioSectionOffset.top.toFixed();
+        audioSectionBottom = audioSectionOffset.bottom.toFixed();
+        audioSectionOffset = audioSection.getBoundingClientRect();
+        webSectionOffset = webSection.getBoundingClientRect();
+        webSectionTop = webSectionOffset.top.toFixed();
+        webSectionBottom = webSectionOffset.bottom.toFixed();
+        teachingSectionOffset = teachingSection.getBoundingClientRect();
+        teachingSectionTop = teachingSectionOffset.top.toFixed();
+        teachingSectionBottom = teachingSectionOffset.bottom.toFixed();
+        otherSectionOffset = otherSection.getBoundingClientRect();
+        otherSectionTop = otherSectionOffset.top.toFixed();
+        otherSectionBottom = otherSectionOffset.bottom.toFixed();
+        webSectionScrollTarget = audioSectionOffset.bottom.toFixed();
+        teachingSectionScrollTarget = webSectionOffset.bottom.toFixed();
+        otherSectionScrollTarget = teachingSectionOffset.bottom.toFixed();
+    });
 
 
 })
