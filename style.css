@@ -71,7 +71,7 @@ header nav a {
 }
 
 .category {
-    margin-bottom: 80vh;
+    padding-top: 70vh;
 }
 
 .card {
@@ -167,7 +167,7 @@ img {
         padding: 0 5px;
     }
     .category {
-        margin-bottom: 75vh;
+        padding-top: 65vh;
     }
     .card {
         margin: 100px 0 100px 0;
@@ -188,7 +188,7 @@ img {
         padding: 0 5px;
     }
     .category {
-        margin-bottom: 70vh;
+        padding-top: 60vh;
     }
     .card {
         margin: 100px 0 100px 0;
