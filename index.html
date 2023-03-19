@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
     <script src="jquery.js"></script>
     <script src="main.js"></script>
-    <script src="p5.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
@@ -23,10 +22,10 @@
         <header id="nav">
             <p>Matt Nelson</p>
             <nav>
-                <p id="audio-button">Audio</p>
-                <p id="web-button">Web</p>
-                <p id="teaching-button">Teaching</p>
-                <p id="other-button">Other</p>
+                <p class="nav-button" id="audio-button">Audio</p>
+                <p class="nav-button" id="web-button">Web</p>
+                <p class="nav-button" id="teaching-button">Teaching</p>
+                <p class="nav-button" id="other-button">Other</p>
             </nav>
         </header>
 
@@ -38,53 +37,67 @@
             <section class="category" id="audio">
                 <div class="card">
                     <img src="/assets/images/audio/jagged-dog-tape.jpg">
-                    <div class="overlay">
-                        <h2>type/token: the jagged dog</h2>
-                    </div>
+                    <a href="https://tracedobjects.bandcamp.com/album/the-jagged-dog" target="_blank">
+                        <div class="overlay">
+                            <h2>type/token: the jagged dog</h2>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="card">
                     <img src="/assets/images/audio/still-tape.jpg">
-                    <div class="overlay">
-                        <h2>type/token: still</h2>
-                    </div>
+                    <a href="https://tracedobjects.bandcamp.com/album/still" target="_blank">
+                        <div class="overlay">
+                            <h2>type/token: still</h2>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="card">
                     <img src="/assets/images/audio/jello-world-tape.jpg">
-                    <div class="overlay">
-                        <h2>Vacationland: Jello World</h2>
-                    </div>
+                    <a href="https://vacationlandmusic.bandcamp.com/album/jello-world" target="_blank">
+                        <div class="overlay">
+                            <h2>Vacationland: Jello World</h2>
+                        </div>
+                    </a>
                 </div>
             </section>
 
             <section class="category" id="web">
                 <div class="card">
                     <img src="/assets/images/web/delta_wave title.gif">
-                    <div class="overlay">
-                        <h2>Delta Wave: Polyrhythmic Synthesizer</h2>
-                    </div>
+                    <a href="https://mattholamieux.github.io/delta_wave/" target="_blank">
+                        <div class="overlay">
+                            <h2>Delta Wave: Polyrhythmic Synthesizer</h2>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="card">
                     <img src="/assets/images/web/p5grain.png">
-                    <div class="overlay">
-                        <h2>p5_grain: Granular sample player</h2>
-                    </div>
+                    <a href="https://mattholamieux.github.io/p5_grain/" target="_blank">
+                        <div class="overlay">
+                            <h2>p5_grain: Granular sample player</h2>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="card">
                     <img src="/assets/images/web/mosaic.png">
-                    <div class="overlay">
-                        <h2>Mosaic: RGB-based monosynth</h2>
-                    </div>
+                    <a href="https://mattholamieux.github.io/mosaic/" target="_blank">
+                        <div class="overlay">
+                            <h2>Mosaic: RGB-based monosynth</h2>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="card">
                     <img src="/assets/images/web/pling-pong1.png">
-                    <div class="overlay">
-                        <h2>Pling Pong: Esoteric Melodies</h2>
-                    </div>
+                    <a href="https://mattholamieux.github.io/plingPong/" target="_blank">
+                        <div class="overlay">
+                            <h2>Pling Pong: Playful melody generator</h2>
+                        </div>
+                    </a>
                 </div>
             </section>
 
@@ -92,9 +105,11 @@
 
                 <div class="card">
                     <img src="/assets/images/teaching/sonic-pi-class.jpg">
-                    <div class="overlay">
-                        <h2>Creative Coding with Sonic Pi</h2>
-                    </div>
+                    <a href="https://sattya.org/" target="_blank">
+                        <div class="overlay">
+                            <h2>Creative Coding with Sonic Pi</h2>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="card">
@@ -118,23 +133,38 @@
 
                 <div class="card">
                     <img src="/assets/images/other/tomatoes.png">
-                    <div class="overlay">
-                        <h2>Tomatoes: Editing and Sound Design</h2>
-                    </div>
+                    <a href="https://www.erinjohnson.online/tomatoes" target="_blank">
+                        <div class="overlay">
+                            <h2>Tomatoes: Editing and Sound Design</h2>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="card">
                     <img src="/assets/images/other/heavy-water.jpg">
-                    <div class="overlay">
-                        <h2>Heavy Water: Editing and Sound Design</h2>
-                    </div>
+                    <a href="https://www.erinjohnson.online/heavywater" target="_blank">
+                        <div class="overlay">
+                            <h2>Heavy Water: Editing and Sound Design</h2>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <img src="/assets/images/other/yettobenamed.png">
+                    <a href="https://www.erinjohnson.online/therearethings" target="_blank">
+                        <div class="overlay">
+                            <h2>There are things in this world that are yet to be named: Editing and Sound Design</h2>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="card">
                     <img src="/assets/images/other/TDA-Still.jpg">
-                    <div class="overlay">
-                        <h2>The Way Things Can Happen: Editing and Sound Design</h2>
-                    </div>
+                    <a href="https://www.erinjohnson.online/2017" target="_blank">
+                        <div class="overlay">
+                            <h2>The Way Things Can Happen: Editing and Sound Design</h2>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="card">
