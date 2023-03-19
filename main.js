@@ -6,9 +6,8 @@ let scaleFactor = 0.9;
 
 
 $(document).ready(function() {
-    window.scroll(0, 0);
+    // window.scroll(0, 0);
     const body = document.getElementById('bg');
-    body.style.backgroundSize = `${bgSize}%`;
     const nav = document.getElementById('nav')
     let viewportHeight = window.innerHeight; // may need to change to window.screen.height for mobile?
     let width = $(window).width();
@@ -37,7 +36,12 @@ $(document).ready(function() {
     let webSectionScrollTarget = audioSectionOffset.bottom.toFixed();
     let teachingSectionScrollTarget = webSectionOffset.bottom.toFixed();
     let otherSectionScrollTarget = teachingSectionOffset.bottom.toFixed();
-    console.log(viewportHeight);
+
+    audioSection.scrollIntoView({ behavior: "smooth", block: "start" })
+    audioSectionTop = audioSectionOffset.top + (viewportHeight * 0.7);
+    scaleFactor = audioSectionTop / viewportHeight
+    bgSize = scaleFactor * 90;
+    body.style.backgroundSize = `${bgSize}%`;
 
     window.onscroll = function(e) {
         scroll = window.scrollY // Get scroll position
@@ -56,7 +60,6 @@ $(document).ready(function() {
         otherSectionOffset = otherSection.getBoundingClientRect();
         otherSectionTop = otherSectionOffset.top + (viewportHeight * 0.7);
         otherSectionBottom = otherSectionOffset.bottom;
-        console.log(audioSectionTop);
 
         if (audioSectionTop < viewportHeight && audioSectionBottom > viewportHeight / 2) {
             body.style.backgroundImage = "url(assets/audio.svg)"
@@ -88,13 +91,6 @@ $(document).ready(function() {
                 scaleFactor = (1.5 + ((otherSectionTop / viewportHeight) * -1));
             }
         }
-        // console.log(audioSectionTop)
-        if (audioSectionTop < viewportHeight - 100) {
-            downArrow.style.visibility = "hidden";
-        } else {
-            // console.log('visible')
-            downArrow.style.visibility = "visible";
-        }
 
         if (scaleFactor > 0.4) {
             bgSize = scaleFactor * 90;
@@ -104,42 +100,19 @@ $(document).ready(function() {
 
     audioButton.addEventListener('click', (e) => {
         e.preventDefault();
-        // window.scrollTo({
-        //     top: 0,
-        //     left: 0,
-        //     behavior: 'smooth'
-        // });
         audioSection.scrollIntoView({ behavior: "smooth", block: "start" })
     })
     webButton.addEventListener('click', (e) => {
         e.preventDefault();
-        // webScrollTarget.scrollIntoView({ behavior: 'smooth', block: 'end' });
-        // window.scrollTo({
-        //     top: webSectionScrollTarget,
-        //     left: 0,
-        //     behavior: 'smooth'
-        // });
         webSection.scrollIntoView({ behavior: "smooth", block: "start" })
     })
     teachingButton.addEventListener('click', (e) => {
         e.preventDefault();
-        // webScrollTarget.scrollIntoView({ behavior: 'smooth', block: 'end' });
-        // window.scrollTo({
-        //     top: teachingSectionScrollTarget,
-        //     left: 0,
-        //     behavior: 'smooth'
-        // });
         teachingSection.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
     })
 
     otherButton.addEventListener('click', (e) => {
         e.preventDefault();
-        // webScrollTarget.scrollIntoView({ behavior: 'smooth', block: 'end' });
-        // window.scrollTo({
-        //     top: otherSectionScrollTarget,
-        //     left: 0,
-        //     behavior: 'smooth'
-        // });
         otherSection.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
     })
 
