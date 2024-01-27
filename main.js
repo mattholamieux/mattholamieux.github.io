@@ -15,11 +15,12 @@ $(document).ready(function() {
     const webSection = document.getElementById('web');
     const teachingSection = document.getElementById('teaching');
     const otherSection = document.getElementById('other');
+    const aboutSection = document.getElementById('about');
     const audioButton = document.getElementById('audio-button');
     const webButton = document.getElementById('web-button');
     const teachingButton = document.getElementById('teaching-button');
     const otherButton = document.getElementById('other-button');
-    const downArrow = document.getElementById('down-arrow');
+    const aboutButton = document.getElementById('about-button');
 
     let audioSectionOffset = audioSection.getBoundingClientRect();
     let audioSectionTop = audioSectionOffset.top.toFixed();
@@ -61,35 +62,22 @@ $(document).ready(function() {
         otherSectionTop = otherSectionOffset.top + (viewportHeight * 0.7);
         otherSectionBottom = otherSectionOffset.bottom;
 
+
         if (audioSectionTop < viewportHeight && audioSectionBottom > viewportHeight / 2) {
             body.style.backgroundImage = "url(assets/audio.svg)"
-                // body.style.backgroundColor = '#2727e6';
-                // nav.style.backgroundColor = '#2727e6b0';
-                // downArrow.style.display = "none";
             if (audioSectionTop > viewportHeight / 2) {
                 scaleFactor = audioSectionTop / viewportHeight
             }
         } else if (webSectionTop < viewportHeight && webSectionBottom > viewportHeight / 2) {
             body.style.backgroundImage = "url(assets/web.svg)"
-                // body.style.backgroundColor = '#6600ff';
-                // nav.style.backgroundColor = '#6600ffb0';
-                // if (webSectionTop > viewportHeight / 2) {
-                //     scaleFactor = (1.5 + ((webSectionTop / viewportHeight) * -1));
-                // }
+
         } else if (teachingSectionTop < viewportHeight && teachingSectionBottom > viewportHeight / 2) {
             body.style.backgroundImage = "url(assets/teaching.svg)";
-            // body.style.backgroundColor = '#666699';
-            // nav.style.backgroundColor = '#666699b0';
-            // if (teachingSectionTop > viewportHeight / 2) {
-            //     scaleFactor = (teachingSectionTop / viewportHeight);
-            // }
+
         } else if (otherSectionTop < viewportHeight && otherSectionBottom > viewportHeight / 2) {
             body.style.backgroundImage = "url(assets/other.svg)"
-                // body.style.backgroundColor = '#009999';
-                // nav.style.backgroundColor = '#009999b0';
-                // if (otherSectionTop > viewportHeight / 2) {
-                //     scaleFactor = (1.5 + ((otherSectionTop / viewportHeight) * -1));
-                // }
+        } else if (otherSectionBottom < viewportHeight) {
+            body.style.backgroundImage = "url(assets/about.svg)"
         }
 
         if (scaleFactor > 0.4) {
@@ -114,6 +102,12 @@ $(document).ready(function() {
     otherButton.addEventListener('click', (e) => {
         e.preventDefault();
         otherSection.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
+    })
+
+    aboutButton.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        aboutSection.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
     })
 
     window.addEventListener("resize", (e) => {
