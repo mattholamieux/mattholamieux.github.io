@@ -1,162 +1,200 @@
+/* * {
+    outline: 1px solid red;
+} */
+
 @font-face {
-    font-family: 'MyWebFont';
-    src: url('assets/fonts/Test The Future Mono/test-the-future-mono-light.woff2') format('woff2');
+    font-family: 'test';
+    src: url('assets/fonts/Test The Future Mono/test-the-future-mono-medium.woff2');
 }
 
 body {
-    font-family: 'MyWebFont';
-    font-size: 24px;
+    /* font-family: 'MyWebFont'; */
+    font-family: 'test';
+    font-size: 22px;
     line-height: 1.25;
+    background-color: #ffffff;
+    color: #000000;
+    background-image: url("assets/images/lowercase adventures in sound.svg");
+    background-repeat: repeat;
+    background-size: 80%;
+}
+
+p {
     color: #fff;
-}
-
-.bg {
-    top: 0;
-    left: 0;
-    background-color: #2727e6;
-    background-image: url(assets/audio.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    transition: background-color 1s ease;
-}
-
-.content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
-main {
-    margin: 0 auto 90vh auto;
-    width: 70%;
+    padding: 10vw;
 }
 
 header {
-    padding: 0px 55px;
-    overflow: hidden;
+    padding: 30px;
     position: sticky;
-    top: 0px;
-    display: flex;
-    justify-content: space-between;
-    z-index: 1;
-    background-color: #2727e6b0;
-    transition: background-color 1s ease;
+    position: -webkit-sticky;
+    top: 50px;
 }
 
-header nav {
-    max-width: 500px;
+section {
+    padding: 0px 30px 0px 30px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 15vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    height: 100vh;
+    /* justify-content: center; */
+    /* width: 33vw; */
 }
 
-header nav p {
-    padding: 0 15px;
-}
-
-header nav a {
-    color: #fff;
-    text-decoration: none;
-    /* margin-left: 12px; */
-}
-
-.nav-button {
-    cursor: pointer;
-}
-
-.category {
-    padding-top: 70vh;
-}
-
-.card {
-    margin: 200px 0 200px 0;
-    position: relative;
-}
-
-.card div.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #2727e653;
+iframe {
+    border: 0;
+    margin: auto;
     width: 100%;
     height: 100%;
 }
 
-.card h2 {
-    text-align: center;
-    padding: 40px;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 45vh;
+@media screen and (max-width: 800px) {
+    section.four {
+        top: 0;
+    }
+    section.five {
+        top: 5vh;
+    }
+    section.six {
+        top: 10vh;
+    }
+    section.seven {
+        width: 80vw;
+        height: 40vh;
+        margin: auto;
+        /* margin-left: 40vw; */
+        top: 20vh;
+        /* margin-bottom: 20vh; */
+    }
+    section.eight {
+        display: none;
+        height: 0;
+        /* margin-bottom: 20vh; */
+    }
+    section.nine {
+        display: none;
+        /* width: 60vw; */
+        height: 0;
+        /* margin: auto; */
+        /* top: 20vh; */
+        /* margin-bottom: 30vh; */
+    }
+    section.ten {
+        /* width: 90vw; */
+        height: 100vh;
+        margin: auto;
+        /* margin: auto; */
+        top: 0;
+        background-color: #000000c3;
+        font-size: 12px;
+    }
 }
 
-img {
+@media screen and (min-width: 800px) {
+    iframe {
+        width: 90%;
+    }
+    section.one {
+        width: 30vw;
+    }
+    section.two {
+        width: 30vw;
+        margin-left: 30vw;
+    }
+    section.three {
+        width: 30vw;
+        margin-left: 60vw;
+    }
+    section.four {
+        width: 60vw;
+        height: 50vh;
+        margin-left: 20vw;
+        top: 5vh;
+        margin-bottom: 40vh;
+    }
+    section.five {
+        width: 40vw;
+        height: 30vh;
+        margin-left: 40vw;
+        top: 30vh;
+        margin-bottom: 20vh;
+    }
+    section.six {
+        width: 20vw;
+        height: 20vh;
+        margin-left: 10vw;
+        top: 40vh;
+        margin-bottom: 20vh;
+    }
+    section.seven {
+        width: 50vw;
+        height: 40vh;
+        margin-left: 40vw;
+        top: 40vh;
+        margin-bottom: 20vh;
+    }
+    section.eight {
+        width: 20vw;
+        height: 20vh;
+        margin-left: 10vw;
+        top: 60vh;
+        margin-bottom: 20vh;
+    }
+    section.nine {
+        width: 60vw;
+        height: 50vh;
+        margin: auto;
+        top: 20vh;
+        margin-bottom: 10vh;
+    }
+    section.ten {
+        width: 90vw;
+        height: 200vh;
+        margin: auto;
+        /* margin: auto; */
+        top: 0;
+        background-color: #0000009e;
+    }
+    #the-time-it-takes {
+        top: 20vh;
+    }
+    #riparian-zone {
+        top: 10vh;
+    }
+    #the-jagged-dog {
+        top: 15vh;
+    }
+    #still {
+        top: 25vh;
+    }
+    #jello-world {
+        top: 10vh;
+    }
+}
+
+#riparian-image {
+    width: 90%;
+    height: 80%;
+    margin: auto;
+}
+
+#time-site {
     width: 100%;
-    height: auto;
+    height: 100%;
+    margin: auto;
 }
 
-@media screen and (max-width: 850px) {
-    body {
-        font-size: 16px;
-    }
-    header {
-        padding: 0px 25px;
-    }
-    header nav p {
-        padding: 0 5px;
-    }
-    .card h2 {
-        font-size: 16px;
-    }
+#delta-wave {
+    width: 100%;
+    height: 100%;
+    margin: auto;
 }
 
-@media screen and (max-width: 600px) {
-    body {
-        font-size: 16px;
-    }
-    header {
-        padding: 0px 20px;
-    }
-    header nav p {
-        padding: 0 5px;
-    }
-    .category {
-        padding-top: 65vh;
-    }
-    .card {
-        margin: 100px 0 100px 0;
-    }
-    .card h2 {
-        font-size: 16px;
-    }
-}
 
-@media screen and (max-width: 500px) {
-    body {
-        font-size: 12px;
-    }
-    header {
-        padding: 0px 10px;
-    }
-    header nav p {
-        padding: 0 5px;
-    }
-    .category {
-        padding-top: 60vh;
-    }
-    .card {
-        margin: 100px 0 100px 0;
-    }
-    .card h2 {
-        font-size: 12px;
-    }
-}
+/* .filler {
+    height: 500vh;
+    width: 100vw;
+    background-color: #13131393;
+} */
